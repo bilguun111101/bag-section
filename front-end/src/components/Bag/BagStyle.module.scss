@@ -1,0 +1,66 @@
+@import "../styles/BagVariables.scss";
+
+.bagSection {
+  width: 100vw;
+  height: auto;
+
+  &__titleSection {
+    width: 100%;
+    height: auto;
+    position: relative;
+    @include elementsPadding();
+    background: url(./background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__title {
+      font-size: 3rem;
+      transition: 0.2s ease all;
+
+      @include breakpoint(md) {
+        font-size: 2.6rem;
+      }
+      @include breakpoint(sm) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__ordersSection {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0 90px;
+
+    @include breakpoint(md) {
+      padding: $pageSmallPadding;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    @include breakpoint(sm) {
+      padding: $paddingPhonePadding;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &__titles {
+      width: 100%;
+      display: flex;
+      padding-bottom: 1rem;
+      justify-content: space-between;
+      border-bottom: 1.5px solid #e5e8e8;
+
+      h4 {
+        @media (max-width: 720px) {
+          display: none;
+        }
+      }
+    }
+
+    &__orders {
+      width: 100%;
+      @include flex();
+    }
+  }
+}

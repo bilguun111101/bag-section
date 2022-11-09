@@ -1,0 +1,27 @@
+@import "../../../styles/BagVariables.scss";
+
+.orderSection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #e5e8e8;
+
+  &__imageSection {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    img {
+      width: 150px;
+      height: auto;
+      @include breakpoint(md) {
+        width: 130px;
+      }
+      @include breakpoint(sm) {
+        width: 100px;
+      }
+    }
+  }
+}
