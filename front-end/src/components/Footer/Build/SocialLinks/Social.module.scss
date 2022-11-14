@@ -1,0 +1,12 @@
+@import "../../../styles/BagVariables.scss";
+
+.socialLinksSection {
+  @include flex();
+
+  &__logos {
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
