@@ -5,13 +5,13 @@ import Layout from "./Layout/Layout";
 
 const RoutesSection = () => {
   return (
-    <Layout>
-      <BrowserRouter>
-        <Routes>
-          <Route path="bag" element={<Bag />} />
-        </Routes>
-      </BrowserRouter>
-    </Layout>
+    // <Layout>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/bag" element={<Bag />} />
+      </Routes>
+    </BrowserRouter>
+    // </Layout>
   );
 };
 

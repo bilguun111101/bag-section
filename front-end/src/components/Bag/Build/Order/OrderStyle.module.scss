@@ -9,18 +9,61 @@
   justify-content: space-between;
   border-bottom: 1.5px solid #e5e8e8;
 
-  &__imageSection {
+  &__container {
+    gap: 1rem;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 2rem;
-    img {
-      width: 150px;
-      height: auto;
-      @include breakpoint(md) {
-        width: 130px;
+
+    &__imgSection {
+      gap: 2rem;
+      width: 19%;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 1300px) {
+        width: 25%;
       }
-      @include breakpoint(sm) {
-        width: 100px;
+      img {
+        width: 95px;
+        height: auto;
+      }
+    }
+
+    &__documentsSection {
+      gap: 1rem;
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      @media (max-width: 1100px) {
+        gap: 1rem;
+        @include flex();
+      }
+
+      .name {
+        display: none;
+        width: 20%;
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width: 1100px) {
+          display: flex;
+        }
+      }
+
+      .content {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        p,
+        button {
+          color: #222222;
+        }
+        button {
+          font-size: 1.1rem;
+        }
       }
     }
   }

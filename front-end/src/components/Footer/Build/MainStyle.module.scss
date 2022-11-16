@@ -16,9 +16,14 @@
   &__content {
     @include flex();
     align-items: flex-start;
-    p {
+    a {
       color: gray;
       cursor: pointer;
+    }
+
+    &__languageSection {
+      display: flex;
+      align-items: center;
     }
   }
 }
