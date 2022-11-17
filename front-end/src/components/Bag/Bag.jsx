@@ -1,19 +1,24 @@
 import React from "react";
-import img from "./background.png";
 import css from "./BagStyle.module.scss";
 import Order from "./Build/Order/Order";
 import Titles from "./Build/Titles/Titles";
+import { motion } from "framer-motion";
 
 const Bag = () => {
+  const datas = new Array(3).fill(1);
   return (
     <section className={css.bagSection}>
       <div className={css.bagSection__titleSection}>
         <h1 className={css.bagSection__titleSection__title}>SHOPPING BAG</h1>
       </div>
-      <div className={css.bagSection__ordersSection}>
+      <motion.div
+        className={css.bagSection__ordersSection}
+        initial={{ opacity: 0, transitionDuration: '0.2s', x: -30, transition: { x: "1s", opacity: "1s" } }}
+        animate={{ opacity: 1, x: 0 }}
+      >
         <Titles />
         <div className={css.bagSection__ordersSection__orders}>
-          <Order />
+          { datas?.map((el, idx) => <Order key={idx} />) }
         </div>
         <div className={css.bagSection__ordersSection__totalSection}>
           <div className={css.bagSection__ordersSection__totalSection__total}>
@@ -21,7 +26,12 @@ const Bag = () => {
             <p>USD 320.00</p>
           </div>
         </div>
-      </div>
+
+        <div className={css.bagSection__ordersSection__main_button_section}>
+          <button>Go to checkout</button>
+          <p>Shipping & taxes calculated a checkout</p>
+        </div>
+      </motion.div>
     </section>
   );
 };
