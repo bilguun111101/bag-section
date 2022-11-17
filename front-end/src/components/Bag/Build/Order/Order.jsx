@@ -1,5 +1,6 @@
 import React from "react";
 import css from "./OrderStyle.module.scss";
+import { motion } from "framer-motion";
 import clx from "classnames";
 
 const Order = () => {
@@ -29,7 +30,7 @@ const Order = () => {
           <h3>Wide leg pants</h3>
           <p>USD 650.00 | Black</p>
           <div className={css.sizeAndQuantity}>
-            <select>
+            {/* <select>
               <option value="">XL</option>
               <option value="">XXL</option>
               <option value="">XXXL</option>
@@ -38,7 +39,28 @@ const Order = () => {
               <option value="">1</option>
               <option value="">2</option>
               <option value="">3</option>
-            </select>
+            </select> */}
+
+            <div className={css.sizeAndQuantity__dropdown}>
+              <button className={css.dropdown_btn}>
+                <p>XXL</p>
+              </button>
+              {/* <ul className={css.drop_text}>
+                <li>XXL</li>
+                <li>XS</li>
+                <li>XL</li>
+              </ul> */}
+            </div>
+            <div className={css.sizeAndQuantity__dropdown}>
+              <button className={css.dropdown_btn}>
+                <p>1</p>
+              </button>
+              {/* <ul className={css.drop_text}>
+                <li>XXL</li>
+                <li>XS</li>
+                <li>XL</li>
+              </ul> */}
+            </div>
           </div>
         </div>
       </div>

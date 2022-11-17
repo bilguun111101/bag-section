@@ -9,7 +9,8 @@
     width: 100%;
     height: 200px;
     position: relative;
-    background-size: contain;
+    // background-size: contain;
+    background-size: cover;
     @include elementsPadding();
     background-position: center;
     background-repeat: no-repeat;
