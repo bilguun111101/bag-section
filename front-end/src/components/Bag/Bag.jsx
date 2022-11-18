@@ -13,12 +13,19 @@ const Bag = () => {
       </div>
       <motion.div
         className={css.bagSection__ordersSection}
-        initial={{ opacity: 0, transitionDuration: '0.2s', x: -30, transition: { x: "1s", opacity: "1s" } }}
+        initial={{
+          opacity: 0,
+          transitionDuration: "0.2s",
+          x: -30,
+          transition: { x: "1s", opacity: "1s" },
+        }}
         animate={{ opacity: 1, x: 0 }}
       >
         <Titles />
         <div className={css.bagSection__ordersSection__orders}>
-          { datas?.map((el, idx) => <Order key={idx} />) }
+          {datas?.map((el, idx) => (
+            <Order key={idx} />
+          ))}
         </div>
         <div className={css.bagSection__ordersSection__totalSection}>
           <div className={css.bagSection__ordersSection__totalSection__total}>

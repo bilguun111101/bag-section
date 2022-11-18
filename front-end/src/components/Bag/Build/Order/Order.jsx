@@ -17,49 +17,57 @@ const Order = () => {
         {/* first */}
         <div className={css.orderSection__container__documentsSection}>
           <div className={css.content}>
-            <p>Black</p>
-            <p>XS</p>
-            <p>2</p>
+            <p>Black</p>{" "}
+            <div className={css.sizeAndQuantity__dropdown}>
+              <button className={css.dropdown_btn}>
+                <p>XXL</p>
+                <img
+                  src="https://raw.githubusercontent.com/AmgalanAmga/mepo-af-project/8f484581fe23075eeaa72c97788988164f20d0bf/frontend/src/assets/images/arrow-down-black.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div className={css.sizeAndQuantity__dropdown}>
+              <button className={css.dropdown_btn}>
+                <p>1</p>
+                <img
+                  src="https://raw.githubusercontent.com/AmgalanAmga/mepo-af-project/8f484581fe23075eeaa72c97788988164f20d0bf/frontend/src/assets/images/arrow-down-black.svg"
+                  alt=""
+                />
+              </button>
+            </div>
             <p>USD 650.00</p>
             <button>remove</button>
           </div>
         </div>
         {/* second */}
         <div className={css.orderSection__container__phoneDocumentSection}>
-          <button className={css.removeBtn}>X</button>
+          <button className={css.removeBtn}>
+            <img
+              src="https://raw.githubusercontent.com/AmgalanAmga/mepo-af-project/8f484581fe23075eeaa72c97788988164f20d0bf/frontend/src/assets/images/close-black.svg"
+              alt=""
+            />
+          </button>
           <h3>Wide leg pants</h3>
           <p>USD 650.00 | Black</p>
           <div className={css.sizeAndQuantity}>
-            {/* <select>
-              <option value="">XL</option>
-              <option value="">XXL</option>
-              <option value="">XXXL</option>
-            </select>
-            <select>
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-            </select> */}
-
             <div className={css.sizeAndQuantity__dropdown}>
               <button className={css.dropdown_btn}>
                 <p>XXL</p>
+                <img
+                  src="https://raw.githubusercontent.com/AmgalanAmga/mepo-af-project/8f484581fe23075eeaa72c97788988164f20d0bf/frontend/src/assets/images/arrow-down-black.svg"
+                  alt=""
+                />
               </button>
-              {/* <ul className={css.drop_text}>
-                <li>XXL</li>
-                <li>XS</li>
-                <li>XL</li>
-              </ul> */}
             </div>
             <div className={css.sizeAndQuantity__dropdown}>
               <button className={css.dropdown_btn}>
                 <p>1</p>
+                <img
+                  src="https://raw.githubusercontent.com/AmgalanAmga/mepo-af-project/8f484581fe23075eeaa72c97788988164f20d0bf/frontend/src/assets/images/arrow-down-black.svg"
+                  alt=""
+                />
               </button>
-              {/* <ul className={css.drop_text}>
-                <li>XXL</li>
-                <li>XS</li>
-                <li>XL</li>
-              </ul> */}
             </div>
           </div>
         </div>
